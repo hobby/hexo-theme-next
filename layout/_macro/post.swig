@@ -47,7 +47,27 @@
         {% endif %}
 
         <div class="post-meta">
+          <span class="post-author">
+            <span class="post-meta-item-icon">
+                <i class="fa fa-user"></i>
+            </span>
+            {% if post.author_name and post.author_name.length %}
+                {% if post.author_url and post.author_url.length %}
+                    <a class="theme-link" href="{{ post.author_url }}" title="{{ post.author_url }}" target="_blank">
+                        <span> {{ post.author_name }}</span>
+                    </a>
+                {% else %}
+                    <span> {{ post.author_name }}</span>
+                {% endif %}
+            {% else %}
+                <a class="theme-link" href="{{ config.url }}" title="{{ config.url }}" target="_blank">
+                    {{ config.author }}
+                </a>
+            {% endif %}
+          </span>
+
           <span class="post-time">
+            &nbsp; | &nbsp;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
