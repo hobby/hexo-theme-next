@@ -69,19 +69,21 @@
           <span class="post-time">
             &nbsp; | &nbsp;
             <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
+              <i class="fa fa-calendar-check-o"></i>
             </span>
             <span class="post-meta-item-text">{{ __('post.posted') }}</span>
-            <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
-              {{ date(post.date, config.date_format) }}
-            </time>
+            <a class="theme-link" href="/archives/{{ date(post.date, 'YYYY/MM/') }}" target="_blank">
+              <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
+                {{ date(post.date, config.date_format) }}
+              </time>
+            </a>
           </span>
 
           {% if post.categories and post.categories.length %}
             <span class="post-category" >
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="fa fa-folder-open"></i>
               </span>
               <span class="post-meta-item-text">{{ __('post.in') }}</span>
               {% for cat in post.categories %}
@@ -104,6 +106,9 @@
             {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comments"></i>
+                </span>
                 <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
                   <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
                 </a>
@@ -131,7 +136,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                <span class="post-meta-item-text">{{__('post.visitors')}} </span>
-               <span class="leancloud-visitors-count"></span>
+               <a class="leancloud-visitors-count" href="#"></a>
               </span>
           {% endif %}
 
@@ -208,7 +213,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag"> <i class="fa fa-tags"></i>&nbsp;{{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
