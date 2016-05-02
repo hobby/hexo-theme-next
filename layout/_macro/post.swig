@@ -66,6 +66,7 @@
             {% endif %}
           </span>
 
+          {% if ! post.hidedate %}
           <span class="post-time">
             &nbsp; | &nbsp;
             <span class="post-meta-item-icon">
@@ -78,6 +79,7 @@
               </time>
             </a>
           </span>
+	  {% endif %}
 
           {% if post.categories and post.categories.length %}
             <span class="post-category" >
