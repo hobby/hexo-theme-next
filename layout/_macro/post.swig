@@ -79,7 +79,25 @@
               </time>
             </a>
           </span>
-	  {% endif %}
+          {% endif %}
+
+          {% if post.custom_title %}
+          <span class="post-custom">
+            &nbsp; | &nbsp;
+            {% if post.custom_icon %}
+            <span class="post-meta-item-icon">
+                <i class="fa fa-{{ post.custom_icon }}"></i>
+            </span>
+            {% endif %}
+            {% if post.custom_url %}
+            <a class="theme-link" href="{{ post.custom_url }}" title="{{ post.custom_title }}" target="_blank">
+                {{ post.custom_title }}
+            </a>
+            {% else %}
+                {{ post.custom_title }}
+            {% endif %}
+          </span>
+          {% endif %}
 
           {% if post.categories and post.categories.length %}
             <span class="post-category" >
