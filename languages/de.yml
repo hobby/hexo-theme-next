@@ -30,8 +30,8 @@ page:
   tags: tags
 
 footer:
-  powered: "Erstellt mit  %s"
-  theme: Theme
+  powered: "Erstellt mit %s"
+  theme: "Theme mit %s%s%s"
 
 counter:
   tag_cloud:

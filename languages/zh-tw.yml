@@ -32,8 +32,8 @@ page:
   tags: 標籤
 
 footer:
-  powered: "由 %s 強力驅動"
-  theme: 主題
+  powered: "Powered by %s"
+  theme: "Theme by %s%s%s"
 
 
 counter:

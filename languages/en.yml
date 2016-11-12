@@ -32,7 +32,7 @@ page:
 
 footer:
   powered: "Powered by %s"
-  theme: Theme
+  theme: "Theme by %s%s%s"
 
 counter:
   tag_cloud:

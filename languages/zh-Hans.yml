@@ -24,7 +24,7 @@ post:
   posted: 发表于
   in: 分类于
   visitors: 阅读次数
-  read_more: 阅读全文
+  read_more: 阅读更多
   untitled: 未命名
   toc_empty: 此文章未包含目录
 
@@ -33,8 +33,8 @@ page:
   tags: 标签
 
 footer:
-  powered: "由 %s 强力驱动"
-  theme: 主题
+  powered: "Powered by %s"
+  theme: "Theme by %s%s%s"
 
 
 counter:

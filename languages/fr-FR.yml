@@ -31,7 +31,7 @@ page:
 
 footer:
   powered: "Powered by %s"
-  theme: Thème
+  theme: "Thème by %s%s%s"
 
 counter:
   tag_cloud:
